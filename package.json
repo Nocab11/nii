@@ -1,0 +1,25 @@
+{
+  "name": "nii",
+  "version": "1.0.0",
+  "description": "nii test",
+  "main": "index.js",
+  "dependencies": {
+    "concurrently": "^6.3.0",
+    "http-server": "^13.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "npm run open",
+    "open": "concurrently \"http-server -a localhost -p 1234\" \"open http://localhost:1234/index.html\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nocab11/nii.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nocab11/nii/issues"
+  },
+  "homepage": "https://github.com/Nocab11/nii#readme"
+}

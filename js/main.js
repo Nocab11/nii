@@ -53,7 +53,7 @@ $(document).ready(function () {
         }
         $.ajax({
             url: '',
-            method: 'post',
+            method: '',
             dataType: 'html',
             data: $(this).serialize(),
             success: function(){
