@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="HandheldFriendly" content="true"/>
     <title>Title</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -9,44 +12,37 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/reset.css">
     <!-- Подключаем CSS файл CustomSelect -->
-    <link rel="stylesheet" href="./custom-select/custom-select.css">
+    <link rel="stylesheet" href="plugins/select/custom-select.css">
     <!-- Подключаем JavaScript файл CustomSelect -->
 
 
 </head>
 <body>
-    <section class="registration-block">
-        <h3 class="heading-registration">Заявка на регистрацию ПО</h3>
-        <form action="" class="form-registration">
-            <input type="text" class="form-registration__input" id="name" name="name" placeholder="Имя">
-            <input type="email" class="form-registration__input" name="email" placeholder="Почта">
-            <input type="text" class="form-registration__input" name="tel" placeholder="Номер телефона">
-            <input type="text" class="form-registration__input" name="name_po" placeholder="Название ПО">
-            <div class="select" id="select-1">
-                <button type="button" class="select__toggle" name="car" value="ford" data-select="toggle" data-index="1">Выберите из списка</button>
-                <div class="select__dropdown">
-                    <ul class="select__options">
-                        <li class="select__option" data-select="option" data-value="volkswagen" data-index="0">Тип первый</li>
-                        <li class="select__option" data-select="option" data-value="ford" data-index="1">Тип второй</li>
-                        <li class="select__option" data-select="option" data-value="toyota" data-index="2">Тип третий</li>
-                    </ul>
+    <main class="main">
+        <section class="registration-block">
+            <h3 class="heading-registration">Заявка на регистрацию ПО</h3>
+            <form action="" class="form-registration">
+                <input type="text" class="form-registration__input" id="name" name="name" placeholder="Имя">
+                <input type="email" class="form-registration__input" name="email" placeholder="Почта">
+                <input type="text" class="form-registration__input" name="tel" placeholder="Номер телефона">
+                <input type="text" class="form-registration__input" name="name_po" placeholder="Название ПО">
+                <div class="select" id="select-1">
+                    <button type="button" class="select__toggle" data-select="toggle" data-index="1">Тип ПО</button>
+                    <div class="select__dropdown">
+                        <ul class="select__options">
+                            <li class="select__option" data-select="option" data-value="volkswagen" data-index="0">Тип первый</li>
+                            <li class="select__option" data-select="option" data-value="ford" data-index="1">Тип второй</li>
+                            <li class="select__option" data-select="option" data-value="toyota" data-index="2">Тип третий</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <textarea rows="10" cols="45" name="text" id="application-text" placeholder="Текст заявки" class="form-registration__textarea"></textarea>
-            <button class="form-registration__button">Отправить</button>
-        </form>
-    </section>
-
-
-
-
-    <!-- Подключаем js-файл CustomSelect -->
-
-
-    <!-- JS код в котором инициализируем экземпляр CustomSelect для .select -->
-
-    <script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
-    <script src="./custom-select/custom-select.js"></script>
+                <textarea rows="10" cols="45" name="text" id="application-text" placeholder="Текст заявки" class="form-registration__textarea"></textarea>
+                <button class="form-registration__button">Отправить</button>
+            </form>
+        </section>
+    </main>
+    <script type="text/javascript" src="plugins/jquery/jquery-3.6.0.min.js"></script>
+    <script src="plugins/select/custom-select.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js" type="text/javascript"></script>
     <script type="text/javascript" src="./js/main.js"></script>
 </body>

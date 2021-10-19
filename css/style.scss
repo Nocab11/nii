@@ -1,3 +1,8 @@
+$font-stack: normal normal 100% 'Abel', sans-serif;
+.main {
+    height: 100vh;
+    background: #F4F6FA;
+}
 @mixin field-form {
     width: 100%;
     max-width: 430px;
@@ -8,12 +13,14 @@
     border-radius: 12px;
     box-sizing: border-box;
     margin-bottom: 20px;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.8);
+}
+::placeholder {
+    color: rgba(0, 0, 0, 0.3);
 }
 .registration-block {
-    font-family: 'Abel', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    background: #F4F6FA;
+    font: $font-stack;
     width: 100%;
     max-width: 470px;
     margin: 0 auto;
@@ -33,9 +40,12 @@
     flex-direction: column;
     align-items: flex-start;
     &__label-error {
-        color: red;
+        font-size: 14px;
+        line-height: 18px;
+        color: #FF1717;
+        margin: 0 0 6px 6px;
     }
-    &__label-error + &__input {
+    &__label-error + &__input, &__label-error + div .select__toggle, &__label-error + textarea {
         border: 1px solid red;
     }
     &__input {
@@ -44,6 +54,7 @@
     &__textarea {
         @include field-form;
         height: 117px;
+        font: $font-stack;
     }
     &__button {
         width: 100%;
@@ -56,19 +67,17 @@
         text-align: center;
         border: none;
         cursor: pointer;
+        transition: 0.5s;
+    }
+    &__button:hover, &__button:focus {
+        background: #105ABC;
     }
 }
 
-.select button {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #fff;
-    border: 1px solid #e5e5e5;
-    border-radius: 12px;
-    cursor: pointer;
-    width: 100%;
-    padding: 13px 17px;
-    user-select: none;
-    margin-bottom: 20px;
+@media (max-width: 480px) {
+    .heading-registration {
+        padding-top: 62px;
+    }
 }
+
+

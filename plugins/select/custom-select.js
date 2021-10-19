@@ -47,7 +47,7 @@ class CustomSelect {
     if (selected) {
       selected.classList.remove(CLASS_NAME_SELECTED);
     }
-    this._elToggle.textContent = 'Выберите из списка';
+    this._elToggle.textContent = 'Типо ПО';
     this._elToggle.value = '';
     this._elToggle.dataset.index = -1;
     this._elRoot.dispatchEvent(new CustomEvent('select.change'));
@@ -114,7 +114,7 @@ CustomSelect.template = params => {
   let items = [];
   let selectedIndex = -1;
   let selectedValue = '';
-  let selectedContent = 'Выберите из списка';
+  let selectedContent = 'Тип ПО';
   options.forEach((option, index) => {
     let selectedClass = '';
     if (option[0] === targetValue) {
