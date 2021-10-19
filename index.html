@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/reset.css">
+</head>
+<body>
+    <section class="registration-block">
+        <h3 class="heading-registration">Заявка на регистрацию ПО</h3>
+        <form action="" class="form-registration">
+            <input type="text" class="form-registration__input" id="name" placeholder="Имя">
+            <input type="text" class="form-registration__input" id="email" placeholder="Почта">
+            <input type="text" class="form-registration__input" id="tel" placeholder="Номер телефона">
+            <input type="text" class="form-registration__input" id="name-po" placeholder="Название ПО">
+            <input type="text" class="form-registration__input" id="type-po" placeholder="Тип ПО">
+            <textarea rows="10" cols="45" name="text" id="application-text" placeholder="Текст заявки" class="form-registration__textarea"></textarea>
+            <button class="form-registration__button">Отправить</button>
+        </form>
+    </section>
+    <div id="message"></div>
+    <div class="form_container">
+        <form action="#" method="#" id="form">
+            <div>
+                <label>
+                    Имя:
+                    <input type="text" name="name" value="Иван Петров">
+                </label>
+            </div>
+            <div>
+                <label>
+                    Возраст:
+                    <input type="number" name="age" value="30">
+                </label>
+            </div>
+            <div>
+                <label>
+                    Я согласен с правилами:
+                    <input type="checkbox" name="terms" checked>
+                </label>
+            </div>
+            <div>
+                Тарифный план:
+                <select name="plan">
+                    <option value="free" selected>Бесплатный</option>
+                    <option value="simple">Простой</option>
+                    <option value="pro">Профессиональный</option>
+                </select>
+            </div>
+            <div>
+                <button type="submit">Отправить</button>
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+</body>
+</html>
